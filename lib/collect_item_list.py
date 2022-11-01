@@ -11,7 +11,7 @@ from lib.debug_log import debug_log
 class stock_item_list() :
     
     def __init__(self) :
-        debug_log('stock_item_list() 객체 생성')
+        debug_log(__name__, 'stock_item_list() 객체 생성')
         
         # 코스피 종목 가져오기
         self.get_item_kospi()
@@ -20,7 +20,7 @@ class stock_item_list() :
         self.get_item_kosdaq()
 
     def get_item_kospi(self) :
-        debug_log('kospi 종목 리스트 받아오기 by get_item_kospi()')
+        debug_log(__name__, 'kospi 종목 리스트 받아오기 by get_item_kospi()')
 
         # web에서 kospi 정보 불러오기
         self.kospi_item_list = pd.read_html('http://kind.krx.co.kr/corpgeneral/corpList.do?method=download&searchType=13&marketType=stockMkt', header=0)[0]
@@ -38,7 +38,7 @@ class stock_item_list() :
 
     # 코스닥 종목 리스트를 가져오는 메서드
     def get_item_kosdaq(self):
-        debug_log('kosdaq 종목 리스트 받아오기 by get_item_kosdaq()')
+        debug_log(__name__, 'kosdaq 종목 리스트 받아오기 by get_item_kosdaq()')
 
         # web에서 kosdaq 정보 불러오기
         self.kosdaq_item_list = \
