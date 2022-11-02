@@ -1,13 +1,14 @@
 ver = '# version 1.0.0'
 
 
-# 내장 모듈 임포트
+# 모듈 임포트
+    ## 내장 모듈 임포트
 import sys
 
-# 외장 모듈 임포트
+    ## 외장 모듈 임포트
 from PyQt5.QtWidgets import *
 
-# 제작 모듈 임포트
+    ## 제작 모듈 임포트
 from lib.debug_log import debug_log
 import lib.open_api as open_api
 
@@ -19,7 +20,8 @@ class collector_total_data() :
         debug_log(__name__, 'collector_total_data() 객체 생성')
         self.api = open_api.OpenAPI()
 
-# 데이터를 받아오는 함수
+
+# 오늘까지의 전체 데이터를 조회하는 함수 실행
     ## get_total_data : 특정 종목의 1985년 이후 특정 날짜까지의 주가 데이터를 모두 가져오는 함수
         ### parameter 
             #### first : 종목코드 (ex.  005930 : 삼성전자 종목 코드) *종목별 코드 번호 존재

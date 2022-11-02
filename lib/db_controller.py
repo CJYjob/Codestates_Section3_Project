@@ -11,6 +11,7 @@ from sqlalchemy import create_engine
 from lib.debug_log import debug_log
 
 
+# declare db_controller class
 class db_controller:
     def __init__(self):
         debug_log(__name__, "db_controller.__init__()")

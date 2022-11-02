@@ -30,7 +30,7 @@ else:
         ### TR 100건 이하 - time.sleep(0.2)를 추가하여 진행가능
         ### TR 1000건 이하 - time.sleep(1.8)을 추가하여 진행가능
         ### TR 1000건 초과 - 1시간 1000건 제약으로 time.sleep(3.6)을 추가하여 진행가능
-TR_request_interval = 3.6 
+TR_request_interval = 0.2
 
 
 # 키움증권 OpenAPI와 통신하기 위한 클래스 선언
@@ -234,7 +234,7 @@ class OpenAPI(QAxWidget):
         if self.ohlcv['date'] == '' :
             return []
         ### 장이 열린 날의 ohlcv 데이터를 DataFrame형태로 변환
-        df = DataFrame(self.ohlcv, columns=['open', 'high', 'low', 'close', 'volume'], index=self.ohlcv['date'])
+        df = DataFrame(self.ohlcv, columns=['date', 'open', 'high', 'low', 'close', 'volume'])#, index=self.ohlcv['date'])
         return df
 
 

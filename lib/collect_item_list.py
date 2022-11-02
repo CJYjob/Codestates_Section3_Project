@@ -1,11 +1,12 @@
 ver = '# version 1.0.0'
 
-# 내장 모듈 임포트
+# 모듈 임포트
+    ## 내장 모듈 임포트
 
-# 외장 모듈 임포트
+    ## 외장 모듈 임포트
 import pandas as pd
 
-# 제작 모듈 임포트
+    ## 제작 모듈 임포트
 from lib.debug_log import debug_log
 
 class stock_item_list() :
