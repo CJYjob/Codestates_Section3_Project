@@ -31,7 +31,7 @@ def index():
         #     return f'{}의 예상 가격은 ${int(y_pred)} 입니다.'
         # else :
         #     return "종목코드 ( %s ) 를 찾을 수 없습니다." % code
-        return "종목코드 ( %s ) 를 입력하셨습니다." % code
+        return "종목코드 ( %s ) 를 입력하셨습니다. \n 예상 주가는 ( ) 입니다." % code
     else :
         return render_template('index.html')
 
